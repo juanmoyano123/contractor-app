@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe: Contractor Network Directory</title>
+    <link rel="stylesheet" href="wireframes.css">
+</head>
+<body>
+    <div class="wireframe-container">
+        <!-- Annotation -->
+        <div class="annotation">
+            <strong>Screen:</strong> Contractor Network Directory<br>
+            <strong>User Persona:</strong> Miguel Rodriguez (Contractor Member)<br>
+            <strong>Purpose:</strong> Search and discover qualified specialists in the network to refer leads<br>
+            <strong>Competitive Inspiration:</strong> Angi (contractor listings), Porch (directory + search), Jobber (filtering UI)
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div class="logo-placeholder">PHCC TEXAS LOGO</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Network</a></li>
+                    <li><a href="#">My Leads</a></li>
+                    <li><a href="#">Share Lead</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="flex align-center gap-2">
+                <span>Miguel Rodriguez</span>
+                <div class="contractor-avatar" style="width: 40px; height: 40px;">MR</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Filter Sidebar -->
+            <aside class="sidebar">
+                <div class="card-header">Filters</div>
+                <div class="annotation" style="margin: 8px 0; font-size: 11px;">
+                    Pattern: Collapsible filter panels from Porch search
+                </div>
+
+                <div class="form-group">
+                    <label>Trade / Specialty</label>
+                    <select>
+                        <option>All Trades</option>
+                        <option>Electrician</option>
+                        <option>Plumber</option>
+                        <option>HVAC</option>
+                        <option>Roofer</option>
+                        <option>Carpenter</option>
+                        <option>Landscaper</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Location / Service Area</label>
+                    <input type="text" placeholder="City or Zip Code">
+                </div>
+
+                <div class="form-group">
+                    <label>Within Radius</label>
+                    <select>
+                        <option>10 miles</option>
+                        <option>25 miles</option>
+                        <option>50 miles</option>
+                        <option>100 miles</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Availability Status</label>
+                    <div style="margin-top: 8px;">
+                        <label style="display: flex; align-items: center; font-weight: normal; margin-bottom: 6px;">
+                            <input type="checkbox" style="width: auto; margin-right: 8px;" checked>
+                            <span class="status-indicator status-accepting"></span>
+                            Accepting Referrals
+                        </label>
+                        <label style="display: flex; align-items: center; font-weight: normal; margin-bottom: 6px;">
+                            <input type="checkbox" style="width: auto; margin-right: 8px;">
+                            <span class="status-indicator status-capacity"></span>
+                            At Capacity
+                        </label>
+                        <label style="display: flex; align-items: center; font-weight: normal;">
+                            <input type="checkbox" style="width: auto; margin-right: 8px;">
+                            <span class="status-indicator status-unavailable"></span>
+                            Emergency Only
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Certifications</label>
+                    <div style="margin-top: 8px;">
+                        <label style="display: block; font-weight: normal; margin-bottom: 6px;">
+                            <input type="checkbox" style="width: auto; margin-right: 8px;">
+                            Licensed
+                        </label>
+                        <label style="display: block; font-weight: normal; margin-bottom: 6px;">
+                            <input type="checkbox" style="width: auto; margin-right: 8px;">
+                            Insured
+                        </label>
+                        <label style="display: block; font-weight: normal;">
+                            <input type="checkbox" style="width: auto; margin-right: 8px;">
+                            Verified Member
+                        </label>
+                    </div>
+                </div>
+
+                <button class="button button-primary" style="width: 100%; margin-top: 16px;">Apply Filters</button>
+                <button class="button button-secondary" style="width: 100%; margin-top: 8px;">Clear All</button>
+
+                <div class="card-header mt-3">Saved Searches</div>
+                <div style="font-size: 12px; color: #666; margin-top: 8px;">
+                    <div style="margin-bottom: 6px;">• Electricians in Austin</div>
+                    <div style="margin-bottom: 6px;">• Roofers within 25 mi</div>
+                    <div>• HVAC - Georgetown area</div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="content">
+                <h1 style="margin-bottom: 8px;">Network Directory</h1>
+                <p style="color: #666; margin-bottom: 16px;">524 members in your network • 342 accepting referrals</p>
+
+                <!-- Search Bar -->
+                <div class="annotation">
+                    Pattern: Prominent search with quick filters (Angi pattern)
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by name, company, or specialty...">
+                    <button class="button button-primary">Search Network</button>
+                </div>
+
+                <!-- Sort Options -->
+                <div class="flex justify-between align-center mb-2">
+                    <div style="font-size: 14px; color: #666;">
+                        Showing 47 electricians in Austin, TX area
+                    </div>
+                    <div class="flex align-center gap-2">
+                        <label style="font-size: 14px; margin-bottom: 0;">Sort by:</label>
+                        <select style="width: auto;">
+                            <option>Best Match</option>
+                            <option>Distance (Nearest)</option>
+                            <option>Response Time (Fastest)</option>
+                            <option>Most Leads Given to Me</option>
+                            <option>Reciprocity Balance</option>
+                            <option>Newest Members</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Contractor Cards Grid -->
+                <div class="annotation">
+                    Pattern: Card grid inspired by Angi contractor profiles + Porch directory
+                </div>
+                <div class="grid-3">
+                    <!-- Card 1 -->
+                    <div class="contractor-card" style="flex-direction: column; align-items: stretch;">
+                        <div class="flex justify-between mb-2">
+                            <div class="contractor-avatar" style="width: 56px; height: 56px;">SK</div>
+                            <div class="flex gap-1" style="height: fit-content;">
+                                <span class="badge">Verified</span>
+                                <span class="badge">Licensed</span>
+                            </div>
+                        </div>
+                        <div class="contractor-name" style="margin-bottom: 2px;">Sarah Kim</div>
+                        <div class="contractor-trade">Kim Electric Services</div>
+                        <div style="font-size: 12px; color: #666; margin-bottom: 8px;">Austin, TX • 4.2 mi away</div>
+
+                        <div class="flex align-center gap-1 mb-2">
+                            <span class="status-indicator status-accepting"></span>
+                            <span style="font-size: 12px; color: #4caf50; font-weight: 600;">Accepting Referrals</span>
+                        </div>
+
+                        <div class="contractor-stats" style="flex-direction: column; gap: 4px; border-top: 1px solid #ccc; padding-top: 8px;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Response Time:</span>
+                                <strong>1.2 hours</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Leads to Me:</span>
+                                <strong>12</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Leads from Me:</span>
+                                <strong>8</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Reciprocity:</span>
+                                <strong style="color: #4caf50;">Balanced</strong>
+                            </div>
+                        </div>
+
+                        <button class="button button-primary" style="width: 100%; margin-top: 12px;">Send Lead</button>
+                        <button class="button button-secondary" style="width: 100%; margin-top: 8px;">View Profile</button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="contractor-card" style="flex-direction: column; align-items: stretch;">
+                        <div class="flex justify-between mb-2">
+                            <div class="contractor-avatar" style="width: 56px; height: 56px;">BD</div>
+                            <div class="flex gap-1" style="height: fit-content;">
+                                <span class="badge">Verified</span>
+                                <span class="badge">Insured</span>
+                            </div>
+                        </div>
+                        <div class="contractor-name" style="margin-bottom: 2px;">Bob Davis</div>
+                        <div class="contractor-trade">Davis Electrical</div>
+                        <div style="font-size: 12px; color: #666; margin-bottom: 8px;">Round Rock, TX • 12.8 mi away</div>
+
+                        <div class="flex align-center gap-1 mb-2">
+                            <span class="status-indicator status-accepting"></span>
+                            <span style="font-size: 12px; color: #4caf50; font-weight: 600;">Accepting Referrals</span>
+                        </div>
+
+                        <div class="contractor-stats" style="flex-direction: column; gap: 4px; border-top: 1px solid #ccc; padding-top: 8px;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Response Time:</span>
+                                <strong>2.8 hours</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Leads to Me:</span>
+                                <strong>0</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Leads from Me:</span>
+                                <strong>0</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Reciprocity:</span>
+                                <strong style="color: #666;">No History</strong>
+                            </div>
+                        </div>
+
+                        <button class="button button-primary" style="width: 100%; margin-top: 12px;">Send Lead</button>
+                        <button class="button button-secondary" style="width: 100%; margin-top: 8px;">View Profile</button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="contractor-card" style="flex-direction: column; align-items: stretch;">
+                        <div class="flex justify-between mb-2">
+                            <div class="contractor-avatar" style="width: 56px; height: 56px;">JM</div>
+                            <div class="flex gap-1" style="height: fit-content;">
+                                <span class="badge">Verified</span>
+                            </div>
+                        </div>
+                        <div class="contractor-name" style="margin-bottom: 2px;">Jennifer Martinez</div>
+                        <div class="contractor-trade">Martinez Electric Pro</div>
+                        <div style="font-size: 12px; color: #666; margin-bottom: 8px;">Georgetown, TX • 18.5 mi away</div>
+
+                        <div class="flex align-center gap-1 mb-2">
+                            <span class="status-indicator status-capacity"></span>
+                            <span style="font-size: 12px; color: #ff9800; font-weight: 600;">At Capacity</span>
+                        </div>
+
+                        <div class="contractor-stats" style="flex-direction: column; gap: 4px; border-top: 1px solid #ccc; padding-top: 8px;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Response Time:</span>
+                                <strong>0.8 hours</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Leads to Me:</span>
+                                <strong>18</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Leads from Me:</span>
+                                <strong>5</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Reciprocity:</span>
+                                <strong style="color: #ff9800;">I Owe Her</strong>
+                            </div>
+                        </div>
+
+                        <button class="button button-secondary" style="width: 100%; margin-top: 12px;">Notify When Available</button>
+                        <button class="button button-secondary" style="width: 100%; margin-top: 8px;">View Profile</button>
+                    </div>
+
+                    <!-- Additional cards would repeat this pattern -->
+                    <div style="border: 2px dashed #ccc; padding: 40px; text-align: center; color: #999;">
+                        [Additional contractor cards...]
+                        <br><br>
+                        Pattern repeats for all search results
+                    </div>
+
+                    <div style="border: 2px dashed #ccc; padding: 40px; text-align: center; color: #999;">
+                        [Additional contractor cards...]
+                        <br><br>
+                        Total: 47 results
+                    </div>
+
+                    <div style="border: 2px dashed #ccc; padding: 40px; text-align: center; color: #999;">
+                        [Additional contractor cards...]
+                        <br><br>
+                        Pagination below
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-between align-center mt-3" style="border-top: 1px solid #ccc; padding-top: 16px;">
+                    <button class="button button-secondary">Previous</button>
+                    <div class="flex gap-1">
+                        <button class="button button-primary">1</button>
+                        <button class="button button-secondary">2</button>
+                        <button class="button button-secondary">3</button>
+                        <button class="button button-secondary">4</button>
+                        <span style="padding: 8px;">...</span>
+                        <button class="button button-secondary">12</button>
+                    </div>
+                    <button class="button button-secondary">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="annotation mt-3">
+        <strong>Interaction Notes:</strong>
+        <ul style="margin: 8px 0 0 20px;">
+            <li>Filters update results in real-time (AJAX)</li>
+            <li>Click "Send Lead" → Opens lead sharing modal</li>
+            <li>Click "View Profile" → Full contractor profile page</li>
+            <li>Hover card → Subtle scale (1.02) and shadow increase</li>
+            <li>Save search → Adds to sidebar saved searches</li>
+            <li>Reciprocity indicator uses color coding: Green (balanced), Orange (I owe), Red (they owe)</li>
+        </ul>
+    </div>
+
+    <div class="annotation mt-2">
+        <strong>Mobile Considerations:</strong>
+        <ul style="margin: 8px 0 0 20px;">
+            <li>Grid becomes 1 column on mobile</li>
+            <li>Filters collapse into bottom sheet or modal</li>
+            <li>Search bar becomes full-width sticky at top</li>
+            <li>Sort dropdown moves to filter modal</li>
+            <li>Cards optimized for vertical scroll</li>
+            <li>Swipe left on card for quick "Send Lead" action</li>
+        </ul>
+    </div>
+</body>
+</html>

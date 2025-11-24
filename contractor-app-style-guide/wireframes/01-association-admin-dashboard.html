@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe: Association Admin Dashboard</title>
+    <link rel="stylesheet" href="wireframes.css">
+</head>
+<body>
+    <div class="wireframe-container">
+        <!-- Annotation -->
+        <div class="annotation">
+            <strong>Screen:</strong> Association Admin Dashboard<br>
+            <strong>User Persona:</strong> Patricia Chen (Association Director)<br>
+            <strong>Purpose:</strong> Provide at-a-glance network health metrics and actionable insights to demonstrate value to board members<br>
+            <strong>Competitive Inspiration:</strong> Jobber (dashboard layout), Buildertrend (metric cards), ServiceTitan (data visualization)
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div class="logo-placeholder">PHCC TEXAS LOGO</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Members</a></li>
+                    <li><a href="#">Leads</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="flex align-center gap-2">
+                <span>Patricia Chen</span>
+                <div class="contractor-avatar" style="width: 40px; height: 40px;">PC</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="card-header">Quick Actions</div>
+                <button class="button button-primary" style="width: 100%; margin-bottom: 8px;">Invite Members</button>
+                <button class="button button-secondary" style="width: 100%; margin-bottom: 8px;">Export Report</button>
+                <button class="button button-secondary" style="width: 100%;">View All Members</button>
+
+                <div class="card-header mt-3">Date Range</div>
+                <select style="width: 100%; margin-bottom: 8px;">
+                    <option>Last 30 Days</option>
+                    <option>Last 90 Days</option>
+                    <option>This Year</option>
+                    <option>All Time</option>
+                </select>
+
+                <div class="card-header mt-3">Network Health</div>
+                <div class="mb-2">
+                    <div class="flex justify-between mb-1">
+                        <span style="font-size: 12px;">Active Members</span>
+                        <span style="font-size: 12px; font-weight: bold;">65%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <div class="flex justify-between mb-1">
+                        <span style="font-size: 12px;">Lead Response Rate</span>
+                        <span style="font-size: 12px; font-weight: bold;">82%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 82%;"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="content">
+                <h1 style="margin-bottom: 8px;">Network Overview</h1>
+                <p style="color: #666; margin-bottom: 24px;">Last updated: November 23, 2025 at 2:45 PM</p>
+
+                <!-- Hero Metrics Row (4 cards) -->
+                <div class="annotation">
+                    Pattern: Metric cards with value + trend + label (inspired by Jobber & ServiceTitan)
+                </div>
+                <div class="grid-4 mb-3">
+                    <div class="metric-card">
+                        <div class="metric-value">$847,350</div>
+                        <div class="metric-label">Total Referral Value</div>
+                        <div class="metric-trend"></div>
+                        <div style="font-size: 12px; color: #4caf50; margin-top: 8px;">↑ 18% vs last period</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">342 / 524</div>
+                        <div class="metric-label">Active Members</div>
+                        <div class="metric-trend"></div>
+                        <div style="font-size: 12px; color: #4caf50; margin-top: 8px;">65% activation rate</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">1,247</div>
+                        <div class="metric-label">Leads This Month</div>
+                        <div class="metric-trend"></div>
+                        <div style="font-size: 12px; color: #4caf50; margin-top: 8px;">↑ 23 vs yesterday</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">1.3 hrs</div>
+                        <div class="metric-label">Avg Response Time</div>
+                        <div class="metric-trend"></div>
+                        <div style="font-size: 12px; color: #4caf50; margin-top: 8px;">↓ 0.4 hrs improvement</div>
+                    </div>
+                </div>
+
+                <!-- Network Activity Graph -->
+                <div class="annotation">
+                    Pattern: Line chart with toggle controls (Jobber dashboard pattern)
+                </div>
+                <div class="card mb-3">
+                    <div class="card-header flex justify-between align-center">
+                        <span>Network Activity (Last 30 Days)</span>
+                        <div class="flex gap-1">
+                            <button class="button-primary">Leads Shared</button>
+                            <button class="button-secondary">Value Generated</button>
+                            <button class="button-secondary">New Members</button>
+                        </div>
+                    </div>
+                    <div class="chart-placeholder">
+                        [Line Chart: Daily leads shared over 30 days]
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <!-- Member Leaderboard -->
+                    <div class="card">
+                        <div class="card-header">Top Referrers This Month</div>
+                        <div class="annotation" style="margin: 8px 0;">
+                            Pattern: Ranked list with avatars (Angi social proof pattern)
+                        </div>
+                        <div class="contractor-card" style="margin-bottom: 12px;">
+                            <div class="contractor-avatar">MR</div>
+                            <div class="contractor-info">
+                                <div class="contractor-name">Miguel Rodriguez</div>
+                                <div class="contractor-trade">Rodriguez Plumbing LLC</div>
+                                <div style="font-size: 14px; font-weight: bold;">47 leads shared</div>
+                            </div>
+                        </div>
+                        <div class="contractor-card" style="margin-bottom: 12px;">
+                            <div class="contractor-avatar">SK</div>
+                            <div class="contractor-info">
+                                <div class="contractor-name">Sarah Kim</div>
+                                <div class="contractor-trade">Kim Electric Services</div>
+                                <div style="font-size: 14px; font-weight: bold;">41 leads shared</div>
+                            </div>
+                        </div>
+                        <div class="contractor-card" style="margin-bottom: 12px;">
+                            <div class="contractor-avatar">TW</div>
+                            <div class="contractor-info">
+                                <div class="contractor-name">Tom Wilson</div>
+                                <div class="contractor-trade">Wilson HVAC Solutions</div>
+                                <div style="font-size: 14px; font-weight: bold;">38 leads shared</div>
+                            </div>
+                        </div>
+                        <button class="button-secondary" style="width: 100%; margin-top: 8px;">View All Members</button>
+                    </div>
+
+                    <!-- Top Receivers -->
+                    <div class="card">
+                        <div class="card-header">Top Receivers This Month</div>
+                        <div class="annotation" style="margin: 8px 0;">
+                            Pattern: Similar to referrers but with conversion rate metric
+                        </div>
+                        <div class="contractor-card" style="margin-bottom: 12px;">
+                            <div class="contractor-avatar">JT</div>
+                            <div class="contractor-info">
+                                <div class="contractor-name">James Thompson</div>
+                                <div class="contractor-trade">Thompson Roofing Co</div>
+                                <div style="font-size: 14px; font-weight: bold;">52 leads received</div>
+                                <div style="font-size: 12px; color: #4caf50;">78% conversion rate</div>
+                            </div>
+                        </div>
+                        <div class="contractor-card" style="margin-bottom: 12px;">
+                            <div class="contractor-avatar">AL</div>
+                            <div class="contractor-info">
+                                <div class="contractor-name">Anna Lopez</div>
+                                <div class="contractor-trade">Lopez Landscaping</div>
+                                <div style="font-size: 14px; font-weight: bold;">49 leads received</div>
+                                <div style="font-size: 12px; color: #4caf50;">81% conversion rate</div>
+                            </div>
+                        </div>
+                        <div class="contractor-card" style="margin-bottom: 12px;">
+                            <div class="contractor-avatar">BD</div>
+                            <div class="contractor-info">
+                                <div class="contractor-name">Bob Davis</div>
+                                <div class="contractor-trade">Davis Electrical</div>
+                                <div style="font-size: 14px; font-weight: bold;">45 leads received</div>
+                                <div style="font-size: 12px; color: #4caf50;">73% conversion rate</div>
+                            </div>
+                        </div>
+                        <button class="button-secondary" style="width: 100%; margin-top: 8px;">View Detailed Analytics</button>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Table -->
+                <div class="card mt-3">
+                    <div class="card-header">Recent Lead Activity</div>
+                    <div class="annotation" style="margin: 8px 0;">
+                        Pattern: Responsive table from Buildertrend with status badges
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Service</th>
+                                <th>Status</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nov 23, 10:15 AM</td>
+                                <td>Miguel Rodriguez</td>
+                                <td>Sarah Kim</td>
+                                <td>Electrical</td>
+                                <td><span class="badge">Accepted</span></td>
+                                <td>$2,400</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 23, 9:42 AM</td>
+                                <td>Tom Wilson</td>
+                                <td>Anna Lopez</td>
+                                <td>Landscaping</td>
+                                <td><span class="badge">Contacted</span></td>
+                                <td>$850</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 23, 8:30 AM</td>
+                                <td>Sarah Kim</td>
+                                <td>Bob Davis</td>
+                                <td>Panel Upgrade</td>
+                                <td><span class="badge">Won</span></td>
+                                <td>$5,200</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 22, 4:15 PM</td>
+                                <td>James Thompson</td>
+                                <td>Miguel Rodriguez</td>
+                                <td>Plumbing</td>
+                                <td><span class="badge">Quoted</span></td>
+                                <td>$1,750</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 22, 2:20 PM</td>
+                                <td>Anna Lopez</td>
+                                <td>Tom Wilson</td>
+                                <td>HVAC Install</td>
+                                <td><span class="badge">Won</span></td>
+                                <td>$8,900</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="annotation mt-3">
+        <strong>Interaction Notes:</strong>
+        <ul style="margin: 8px 0 0 20px;">
+            <li>Click metric card → Detailed breakdown modal</li>
+            <li>Hover graph points → Tooltip with exact values</li>
+            <li>Click member name → Individual member profile</li>
+            <li>Date range selector → Refreshes all metrics</li>
+            <li>Export Report → Generates PDF for board presentation</li>
+        </ul>
+    </div>
+
+    <div class="annotation mt-2">
+        <strong>Mobile Considerations:</strong>
+        <ul style="margin: 8px 0 0 20px;">
+            <li>Metric cards stack vertically (1 column)</li>
+            <li>Graph becomes horizontally scrollable</li>
+            <li>Leaderboard moves below graph</li>
+            <li>Sidebar collapses into hamburger menu</li>
+            <li>Table becomes card-based list on mobile</li>
+        </ul>
+    </div>
+</body>
+</html>
