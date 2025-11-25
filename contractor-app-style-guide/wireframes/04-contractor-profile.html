@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe: Contractor Profile</title>
+    <link rel="stylesheet" href="wireframes.css">
+</head>
+<body>
+    <div class="wireframe-container">
+        <!-- Annotation -->
+        <div class="annotation">
+            <strong>Screen:</strong> Contractor Profile<br>
+            <strong>User Persona:</strong> Any contractor viewing another contractor's profile<br>
+            <strong>Purpose:</strong> Display contractor information, stats, reciprocity balance, and enable direct lead sharing<br>
+            <strong>Competitive Inspiration:</strong> Angi (contractor profiles), LinkedIn (professional profiles), Porch (verification signals)
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div class="logo-placeholder">PHCC TEXAS LOGO</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Network</a></li>
+                    <li><a href="#">My Leads</a></li>
+                    <li><a href="#">Share Lead</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="flex align-center gap-2">
+                <span>Miguel Rodriguez</span>
+                <div class="contractor-avatar" style="width: 40px; height: 40px;">MR</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main style="display: block;">
+            <div class="content" style="max-width: 1000px; margin: 0 auto;">
+                <!-- Back Button -->
+                <div class="mb-2">
+                    <button class="button button-secondary">← Back to Network Directory</button>
+                </div>
+
+                <!-- Profile Header Section -->
+                <div class="annotation">
+                    Pattern: Hero header with key info and CTA (Angi contractor profile pattern)
+                </div>
+                <div class="card" style="background: linear-gradient(180deg, #e0e0e0 0%, #f5f5f5 100%);">
+                    <div class="flex gap-3">
+                        <!-- Avatar Section -->
+                        <div style="flex-shrink: 0;">
+                            <div class="contractor-avatar" style="width: 120px; height: 120px; font-size: 32px; border: 4px solid #fff;">SK</div>
+                            <div class="flex align-center gap-1 justify-between mt-2">
+                                <span class="status-indicator status-accepting" style="width: 12px; height: 12px;"></span>
+                                <span style="font-size: 12px; color: #4caf50; font-weight: 600;">Accepting Referrals</span>
+                            </div>
+                        </div>
+
+                        <!-- Main Info Section -->
+                        <div style="flex: 1;">
+                            <div class="flex justify-between align-center mb-2">
+                                <div>
+                                    <h1 style="margin-bottom: 4px;">Sarah Kim</h1>
+                                    <h2 style="font-size: 20px; color: #666; margin-bottom: 8px;">Kim Electric Services</h2>
+                                </div>
+                                <div class="flex gap-1" style="flex-wrap: wrap;">
+                                    <span class="badge">Verified Member</span>
+                                    <span class="badge">Licensed</span>
+                                    <span class="badge">Insured</span>
+                                    <span class="badge">Top Referrer</span>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3 mb-2" style="font-size: 14px; color: #666;">
+                                <div>📍 Austin, TX 78701</div>
+                                <div>📞 (512) 555-1234</div>
+                                <div>✉️ sarah@kimelectric.com</div>
+                            </div>
+
+                            <div class="mb-2" style="font-size: 14px;">
+                                <strong>Specialties:</strong> Residential Electrical, Commercial Electrical, Panel Upgrades, Smart Home Installation
+                            </div>
+
+                            <div style="font-size: 14px; color: #666;">
+                                <strong>Service Areas:</strong> Austin, Round Rock, Cedar Park, Georgetown (within 25 mile radius)
+                            </div>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div style="flex-shrink: 0; text-align: center;">
+                            <button class="button button-primary button-large" style="width: 180px; margin-bottom: 8px;">
+                                Send Lead
+                            </button>
+                            <button class="button button-secondary" style="width: 180px; margin-bottom: 8px;">
+                                Message
+                            </button>
+                            <button class="button button-secondary" style="width: 180px;">
+                                Add to Favorites
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="annotation">
+                    Pattern: Key metrics in card grid (Jobber dashboard pattern)
+                </div>
+                <div class="grid-4 mt-3">
+                    <div class="metric-card">
+                        <div class="metric-value" style="font-size: 40px;">1.2</div>
+                        <div class="metric-label">Avg Response Time (hours)</div>
+                        <div style="font-size: 12px; color: #4caf50; margin-top: 8px;">Better than 78% of network</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" style="font-size: 40px;">47</div>
+                        <div class="metric-label">Leads Received (All Time)</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 8px;">18 this month</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" style="font-size: 40px;">41</div>
+                        <div class="metric-label">Leads Given (All Time)</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 8px;">12 this month</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" style="font-size: 40px; color: #4caf50;">82%</div>
+                        <div class="metric-label">Conversion Rate</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 8px;">38 of 47 leads won</div>
+                    </div>
+                </div>
+
+                <!-- Reciprocity Section (Key Innovation) -->
+                <div class="annotation">
+                    Pattern: UNIQUE FEATURE - Reciprocity tracking visualization (our competitive advantage)
+                </div>
+                <div class="card mt-3">
+                    <div class="card-header">My Referral Relationship with Sarah Kim</div>
+                    <div class="grid-2">
+                        <!-- Left: Give/Receive Balance -->
+                        <div>
+                            <div style="text-align: center; margin-bottom: 16px;">
+                                <div style="font-size: 14px; color: #666; margin-bottom: 12px;">Lead Exchange Balance</div>
+                                <div class="flex justify-between align-center" style="margin-bottom: 8px;">
+                                    <div style="text-align: left;">
+                                        <div style="font-size: 24px; font-weight: bold;">12</div>
+                                        <div style="font-size: 12px; color: #666;">Leads I Gave Her</div>
+                                    </div>
+                                    <div style="font-size: 40px; color: #4caf50;">⚖️</div>
+                                    <div style="text-align: right;">
+                                        <div style="font-size: 24px; font-weight: bold;">8</div>
+                                        <div style="font-size: 12px; color: #666;">Leads She Gave Me</div>
+                                    </div>
+                                </div>
+                                <div class="progress-bar" style="height: 12px; margin: 16px 0;">
+                                    <div class="progress-fill" style="width: 60%; background-color: #4caf50;"></div>
+                                </div>
+                                <div style="background-color: #e8f5e9; padding: 12px; border: 1px solid #4caf50;">
+                                    <strong style="color: #2e7d32;">✓ Balanced Relationship</strong><br>
+                                    <span style="font-size: 12px; color: #666;">Sarah has a good reciprocity balance with you (ratio: 0.67)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Recent Activity -->
+                        <div>
+                            <div style="font-size: 14px; font-weight: 600; margin-bottom: 12px;">Recent Lead Exchanges</div>
+                            <div style="font-size: 12px;">
+                                <div style="padding: 8px; border-bottom: 1px solid #ccc;">
+                                    <div style="color: #4caf50;">✓ Nov 18 - I gave her: Electrical Panel Upgrade ($2,400)</div>
+                                    <div style="margin-left: 16px; color: #666;">Status: Won</div>
+                                </div>
+                                <div style="padding: 8px; border-bottom: 1px solid #ccc;">
+                                    <div style="color: #2196f3;">← Nov 12 - She gave me: Water Heater Replacement ($1,800)</div>
+                                    <div style="margin-left: 16px; color: #666;">Status: Won</div>
+                                </div>
+                                <div style="padding: 8px; border-bottom: 1px solid #ccc;">
+                                    <div style="color: #4caf50;">✓ Nov 5 - I gave her: Smart Home Wiring ($3,200)</div>
+                                    <div style="margin-left: 16px; color: #666;">Status: Quoted</div>
+                                </div>
+                                <div style="padding: 8px;">
+                                    <div style="color: #2196f3;">← Oct 28 - She gave me: Pipe Leak Repair ($450)</div>
+                                    <div style="margin-left: 16px; color: #666;">Status: Won</div>
+                                </div>
+                            </div>
+                            <div style="text-align: center; margin-top: 12px;">
+                                <a href="#" style="color: #333; text-decoration: underline; font-size: 12px;">View Full History →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="grid-2 mt-3">
+                    <!-- Left Column -->
+                    <div>
+                        <div class="card">
+                            <div class="card-header">About Kim Electric Services</div>
+                            <div style="font-size: 14px; line-height: 1.6; color: #333;">
+                                <p style="margin-bottom: 12px;">
+                                    Kim Electric Services has been serving the Austin area for over 12 years. We specialize in residential and commercial electrical work, with expertise in panel upgrades, smart home installations, and troubleshooting.
+                                </p>
+                                <p>
+                                    Our team is fully licensed, insured, and committed to providing quality work and excellent customer service. We pride ourselves on fast response times and clear communication.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card mt-2">
+                            <div class="card-header">Certifications & Licenses</div>
+                            <div style="font-size: 14px;">
+                                <div class="flex justify-between align-center mb-1" style="padding: 8px; border-bottom: 1px solid #ccc;">
+                                    <span>Texas Electrical License</span>
+                                    <span class="badge">Verified ✓</span>
+                                </div>
+                                <div class="flex justify-between align-center mb-1" style="padding: 8px; border-bottom: 1px solid #ccc;">
+                                    <span>General Liability Insurance</span>
+                                    <span class="badge">Verified ✓</span>
+                                </div>
+                                <div class="flex justify-between align-center mb-1" style="padding: 8px; border-bottom: 1px solid #ccc;">
+                                    <span>Workers Compensation</span>
+                                    <span class="badge">Verified ✓</span>
+                                </div>
+                                <div class="flex justify-between align-center" style="padding: 8px;">
+                                    <span>NECA Member Since 2011</span>
+                                    <span class="badge">✓</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div>
+                        <div class="card">
+                            <div class="card-header">Service Details</div>
+                            <div style="font-size: 14px;">
+                                <div class="mb-2">
+                                    <strong>Typical Response Time:</strong> 1-2 hours
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Business Hours:</strong> Mon-Fri 7:00 AM - 6:00 PM, Sat 8:00 AM - 2:00 PM
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Emergency Services:</strong> Available (24/7 on-call)
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Service Radius:</strong> 25 miles from Austin
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Typical Project Size:</strong> $500 - $15,000
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Team Size:</strong> 4 licensed electricians
+                                </div>
+                                <div>
+                                    <strong>Member Since:</strong> March 2018 (7 years in PHCC Texas)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-2">
+                            <div class="card-header">Preferred Referral Types</div>
+                            <div class="annotation" style="margin: 8px 0; font-size: 11px;">
+                                Pattern: Helps match right leads to right contractors
+                            </div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                                <span class="badge" style="background-color: #4caf50; color: #fff;">Panel Upgrades</span>
+                                <span class="badge" style="background-color: #4caf50; color: #fff;">Residential Rewiring</span>
+                                <span class="badge" style="background-color: #4caf50; color: #fff;">Smart Home</span>
+                                <span class="badge" style="background-color: #4caf50; color: #fff;">Commercial</span>
+                                <span class="badge">Generator Installation</span>
+                                <span class="badge">EV Charger Install</span>
+                                <span class="badge">Lighting Design</span>
+                            </div>
+                            <div style="font-size: 12px; color: #666; margin-top: 12px;">
+                                Green badges indicate high-priority referrals
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews/Testimonials Section (MVP Phase 2) -->
+                <div class="card mt-3" style="background-color: #f9f9f9; opacity: 0.7;">
+                    <div class="card-header">Member Reviews (Coming in Phase 2)</div>
+                    <div class="annotation" style="margin: 8px 0;">
+                        Pattern: Review system from Angi - peer reviews within network (future feature)
+                    </div>
+                    <div style="text-align: center; padding: 24px; color: #666;">
+                        <div style="font-size: 48px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+                        <div style="font-size: 18px; font-weight: 600; margin-bottom: 4px;">4.9 out of 5</div>
+                        <div style="font-size: 14px;">Based on 23 reviews from network members</div>
+                        <div style="margin-top: 16px; font-size: 12px; font-style: italic;">
+                            Feature placeholder - Will include peer reviews, quality ratings, and testimonials
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Lead Activity -->
+                <div class="card mt-3">
+                    <div class="card-header">Recent Lead Activity (Public Stats)</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Service Type</th>
+                                <th>Status</th>
+                                <th>Response Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nov 18, 2025</td>
+                                <td>Panel Upgrade</td>
+                                <td><span class="badge">Won</span></td>
+                                <td>0.8 hours</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 15, 2025</td>
+                                <td>Ceiling Fan Install</td>
+                                <td><span class="badge">Won</span></td>
+                                <td>1.5 hours</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 12, 2025</td>
+                                <td>Outlet Repair</td>
+                                <td><span class="badge">Won</span></td>
+                                <td>2.1 hours</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 8, 2025</td>
+                                <td>Smart Home Wiring</td>
+                                <td><span class="badge">Quoted</span></td>
+                                <td>1.0 hours</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 3, 2025</td>
+                                <td>Troubleshooting</td>
+                                <td><span class="badge">Lost</span></td>
+                                <td>0.5 hours</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="font-size: 12px; color: #666; margin-top: 12px; text-align: center;">
+                        Showing last 5 leads • Customer names omitted for privacy
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="annotation mt-3">
+        <strong>Interaction Notes:</strong>
+        <ul style="margin: 8px 0 0 20px;">
+            <li>Click "Send Lead" → Opens lead sharing modal with this contractor pre-selected</li>
+            <li>Click "Message" → Opens direct messaging interface</li>
+            <li>Click "Add to Favorites" → Saves to favorites list for quick access</li>
+            <li>Reciprocity section updates in real-time as leads are exchanged</li>
+            <li>Availability status updates automatically based on contractor's settings</li>
+        </ul>
+    </div>
+
+    <div class="annotation mt-2">
+        <strong>Trust-Building Elements (from Angi/Porch analysis):</strong>
+        <ul style="margin: 8px 0 0 20px;">
+            <li>Verification badges prominently displayed (Licensed, Insured, Verified Member)</li>
+            <li>Detailed certifications section with verification checkmarks</li>
+            <li>Response time statistics (builds reliability expectation)</li>
+            <li>Conversion rate metric (demonstrates success with previous referrals)</li>
+            <li>Reciprocity balance visualization (unique to our platform - builds fair exchange)</li>
+            <li>Years in business and association membership tenure</li>
+            <li>Public lead activity log (transparency without revealing private customer info)</li>
+        </ul>
+    </div>
+
+    <div class="annotation mt-2">
+        <strong>Mobile Considerations:</strong>
+        <ul style="margin: 8px 0 0 20px;">
+            <li>Header section stacks vertically (avatar → info → CTAs)</li>
+            <li>Stats cards become 2-column grid or single column</li>
+            <li>Reciprocity visualization becomes vertical layout</li>
+            <li>Two-column sections stack vertically</li>
+            <li>Table becomes card-based list on mobile</li>
+            <li>Sticky "Send Lead" button at bottom on mobile</li>
+        </ul>
+    </div>
+</body>
+</html>

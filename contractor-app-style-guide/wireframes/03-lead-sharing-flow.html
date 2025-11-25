@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe: Lead Sharing Flow</title>
+    <link rel="stylesheet" href="wireframes.css">
+</head>
+<body>
+    <div class="wireframe-container">
+        <!-- Annotation -->
+        <div class="annotation">
+            <strong>Screen:</strong> Lead Sharing Flow (Multi-Step)<br>
+            <strong>User Persona:</strong> Miguel Rodriguez (Contractor Member)<br>
+            <strong>Purpose:</strong> Quick and easy lead sharing with contractors in network<br>
+            <strong>Competitive Inspiration:</strong> Jobber (quote creation flow), ServiceTitan (multi-step forms), Porch (lead submission)
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div class="logo-placeholder">PHCC TEXAS LOGO</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Network</a></li>
+                    <li><a href="#">My Leads</a></li>
+                    <li><a href="#">Share Lead</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="flex align-center gap-2">
+                <span>Miguel Rodriguez</span>
+                <div class="contractor-avatar" style="width: 40px; height: 40px;">MR</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main style="display: block;">
+            <div class="content" style="max-width: 800px; margin: 0 auto;">
+                <h1 style="margin-bottom: 8px;">Share a Lead</h1>
+                <p style="color: #666; margin-bottom: 24px;">Refer a customer to a trusted partner in your network</p>
+
+                <!-- Progress Steps -->
+                <div class="annotation">
+                    Pattern: Multi-step progress indicator (Jobber pattern)
+                </div>
+                <div class="steps">
+                    <div class="step active">
+                        <div style="font-weight: 600; margin-top: 4px;">1. Customer Info</div>
+                    </div>
+                    <div class="step">
+                        <div style="font-weight: 600; margin-top: 4px;">2. Select Contractor</div>
+                    </div>
+                    <div class="step">
+                        <div style="font-weight: 600; margin-top: 4px;">3. Review & Send</div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Customer Information -->
+                <div class="card">
+                    <div class="card-header">Step 1: Customer Information</div>
+                    <div class="annotation" style="margin: 8px 0;">
+                        Pattern: Form validation with required fields (ServiceTitan pattern)
+                    </div>
+
+                    <form>
+                        <!-- Customer Name -->
+                        <div class="form-group">
+                            <label class="input-required">Customer Name</label>
+                            <input type="text" placeholder="Enter customer's full name" required>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label class="input-required">Phone Number</label>
+                            <input type="tel" placeholder="(555) 123-4567" required>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">
+                                Customer will receive SMS notification when lead is accepted
+                            </div>
+                        </div>
+
+                        <!-- Email (Optional) -->
+                        <div class="form-group">
+                            <label>Email (Optional)</label>
+                            <input type="email" placeholder="customer@email.com">
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-group">
+                            <label>Service Address</label>
+                            <input type="text" placeholder="123 Main St, Austin, TX 78701">
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">
+                                Used to find contractors in the right service area
+                            </div>
+                        </div>
+
+                        <!-- Service Needed -->
+                        <div class="form-group">
+                            <label class="input-required">Service Needed</label>
+                            <select required>
+                                <option value="">Select a trade...</option>
+                                <option>Electrical</option>
+                                <option>Plumbing</option>
+                                <option>HVAC</option>
+                                <option>Roofing</option>
+                                <option>Carpentry</option>
+                                <option>Landscaping</option>
+                                <option>Painting</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Specific Service Details -->
+                        <div class="form-group">
+                            <label class="input-required">Service Description</label>
+                            <textarea placeholder="Describe the work needed (e.g., 'Replace water heater', 'Install ceiling fan', 'Fix leaking pipe')..." required></textarea>
+                            <div style="font-size: 12px; color: #666; margin-top: 4px;">
+                                <span id="char-count">0</span>/500 characters
+                            </div>
+                        </div>
+
+                        <!-- Urgency Level -->
+                        <div class="form-group">
+                            <label class="input-required">Urgency</label>
+                            <div style="display: flex; gap: 8px; margin-top: 8px;">
+                                <button type="button" class="button button-secondary" style="flex: 1;">
+                                    Emergency<br>
+                                    <span style="font-size: 11px; font-weight: normal;">Today/ASAP</span>
+                                </button>
+                                <button type="button" class="button button-secondary" style="flex: 1;">
+                                    This Week<br>
+                                    <span style="font-size: 11px; font-weight: normal;">1-7 days</span>
+                                </button>
+                                <button type="button" class="button button-primary" style="flex: 1;">
+                                    Flexible<br>
+                                    <span style="font-size: 11px; font-weight: normal;">Next 2 weeks</span>
+                                </button>
+                                <button type="button" class="button button-secondary" style="flex: 1;">
+                                    Scheduled<br>
+                                    <span style="font-size: 11px; font-weight: normal;">Future date</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Budget Range (Optional) -->
+                        <div class="form-group">
+                            <label>Estimated Budget Range (Optional)</label>
+                            <select>
+                                <option value="">Not specified</option>
+                                <option>Under $500</option>
+                                <option>$500 - $1,000</option>
+                                <option>$1,000 - $2,500</option>
+                                <option>$2,500 - $5,000</option>
+                                <option>$5,000 - $10,000</option>
+                                <option>Over $10,000</option>
+                            </select>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="form-group">
+                            <label>Additional Notes (Optional)</label>
+                            <textarea placeholder="Any special instructions, access information, or context for the contractor..." rows="3"></textarea>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="flex justify-between mt-3" style="border-top: 1px solid #ccc; padding-top: 16px;">
+                            <button type="button" class="button button-secondary">Cancel</button>
+                            <button type="button" class="button button-primary button-large">
+                                Continue to Select Contractor →
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 2 Preview (collapsed) -->
+                <div class="card mt-3" style="background-color: #f9f9f9; opacity: 0.6;">
+                    <div class="card-header">Step 2: Select Contractor (Next)</div>
+                    <div style="padding: 16px; text-align: center; color: #666;">
+                        Search and select from electricians in Austin, TX area
+                    </div>
+                </div>
+
+                <!-- Step 3 Preview (collapsed) -->
+                <div class="card mt-2" style="background-color: #f9f9f9; opacity: 0.6;">
+                    <div class="card-header">Step 3: Review & Send (Final)</div>
+                    <div style="padding: 16px; text-align: center; color: #666;">
+                        Review details and confirm lead sharing
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Alternative View: Step 2 (shown on next page/state) -->
+    <div class="wireframe-container mt-3">
+        <div class="annotation">
+            <strong>Step 2 State:</strong> Select Contractor from Network
+        </div>
+
+        <header>
+            <div class="logo-placeholder">PHCC TEXAS LOGO</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Network</a></li>
+                    <li><a href="#">My Leads</a></li>
+                    <li><a href="#">Share Lead</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="flex align-center gap-2">
+                <span>Miguel Rodriguez</span>
+                <div class="contractor-avatar" style="width: 40px; height: 40px;">MR</div>
+            </div>
+        </header>
+
+        <main style="display: block;">
+            <div class="content" style="max-width: 900px; margin: 0 auto;">
+                <h1 style="margin-bottom: 8px;">Share a Lead</h1>
+                <p style="color: #666; margin-bottom: 24px;">Select a contractor to receive this lead</p>
+
+                <!-- Progress Steps -->
+                <div class="steps">
+                    <div class="step completed">
+                        <div style="font-weight: 600; margin-top: 4px;">1. Customer Info</div>
+                    </div>
+                    <div class="step active">
+                        <div style="font-weight: 600; margin-top: 4px;">2. Select Contractor</div>
+                    </div>
+                    <div class="step">
+                        <div style="font-weight: 600; margin-top: 4px;">3. Review & Send</div>
+                    </div>
+                </div>
+
+                <!-- Lead Summary Card (collapsed) -->
+                <div class="card" style="background-color: #f0f0f0;">
+                    <div class="flex justify-between align-center">
+                        <div>
+                            <strong>Customer:</strong> John Smith • <strong>Service:</strong> Electrical - Install ceiling fan • <strong>Urgency:</strong> Flexible
+                        </div>
+                        <button class="button button-secondary">Edit</button>
+                    </div>
+                </div>
+
+                <!-- Search & Filters -->
+                <div class="card mt-2">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search electricians in Austin, TX area..." value="Electrician">
+                        <select style="width: auto;">
+                            <option>All Availability</option>
+                            <option selected>Accepting Referrals Only</option>
+                            <option>Include At Capacity</option>
+                        </select>
+                        <button class="button button-primary">Search</button>
+                    </div>
+                </div>
+
+                <!-- Contractor Selection Options -->
+                <div class="annotation">
+                    Pattern: Two selection modes - single send vs. broadcast (unique to our product)
+                </div>
+
+                <div class="tabs">
+                    <div class="tab active">Send to One Contractor</div>
+                    <div class="tab">Broadcast to Top 3 (First to Accept Wins)</div>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 14px; color: #666; margin-bottom: 16px;">
+                        Found 12 electricians accepting referrals in Austin area • Sorted by reciprocity balance
+                    </div>
+
+                    <!-- Recommended Contractors -->
+                    <div style="background-color: #fff3cd; border: 1px solid #ffc107; padding: 12px; margin-bottom: 16px;">
+                        <strong>💡 Recommended:</strong> These contractors have given you leads recently and may be more likely to reciprocate
+                    </div>
+
+                    <!-- Contractor Selection Cards -->
+                    <label style="display: block; margin-bottom: 12px; cursor: pointer;">
+                        <input type="radio" name="contractor" style="display: none;">
+                        <div class="contractor-card" style="border: 3px solid #333;">
+                            <div class="flex gap-2" style="width: 100%;">
+                                <div class="contractor-avatar">SK</div>
+                                <div class="contractor-info" style="flex: 1;">
+                                    <div class="contractor-name">Sarah Kim <span class="badge">Recommended</span></div>
+                                    <div class="contractor-trade">Kim Electric Services • Austin, TX (4.2 mi)</div>
+                                    <div class="contractor-stats" style="margin-top: 8px;">
+                                        <div>Response: <strong>1.2 hrs</strong></div>
+                                        <div>Leads to me: <strong>12</strong></div>
+                                        <div>From me: <strong>8</strong></div>
+                                        <div style="color: #4caf50;">✓ Balanced</div>
+                                    </div>
+                                </div>
+                                <div style="text-align: center;">
+                                    <div class="status-indicator status-accepting" style="width: 12px; height: 12px; margin: 0 auto 4px;"></div>
+                                    <div style="font-size: 11px; color: #4caf50; font-weight: 600;">Accepting</div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label style="display: block; margin-bottom: 12px; cursor: pointer;">
+                        <input type="radio" name="contractor" style="display: none;">
+                        <div class="contractor-card" style="border: 2px solid #ccc;">
+                            <div class="flex gap-2" style="width: 100%;">
+                                <div class="contractor-avatar">BD</div>
+                                <div class="contractor-info" style="flex: 1;">
+                                    <div class="contractor-name">Bob Davis</div>
+                                    <div class="contractor-trade">Davis Electrical • Round Rock, TX (12.8 mi)</div>
+                                    <div class="contractor-stats" style="margin-top: 8px;">
+                                        <div>Response: <strong>2.8 hrs</strong></div>
+                                        <div>Leads to me: <strong>0</strong></div>
+                                        <div>From me: <strong>0</strong></div>
+                                        <div style="color: #666;">No History</div>
+                                    </div>
+                                </div>
+                                <div style="text-align: center;">
+                                    <div class="status-indicator status-accepting" style="width: 12px; height: 12px; margin: 0 auto 4px;"></div>
+                                    <div style="font-size: 11px; color: #4caf50; font-weight: 600;">Accepting</div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label style="display: block; margin-bottom: 12px; cursor: pointer;">
+                        <input type="radio" name="contractor" style="display: none;">
+                        <div class="contractor-card" style="border: 2px solid #ccc;">
+                            <div class="flex gap-2" style="width: 100%;">
+                                <div class="contractor-avatar">JM</div>
+                                <div class="contractor-info" style="flex: 1;">
+                                    <div class="contractor-name">Jennifer Martinez <span class="badge">Top Rated</span></div>
+                                    <div class="contractor-trade">Martinez Electric Pro • Georgetown, TX (18.5 mi)</div>
+                                    <div class="contractor-stats" style="margin-top: 8px;">
+                                        <div>Response: <strong>0.8 hrs</strong></div>
+                                        <div>Leads to me: <strong>18</strong></div>
+                                        <div>From me: <strong>5</strong></div>
+                                        <div style="color: #ff9800;">⚠ I Owe Her</div>
+                                    </div>
+                                </div>
+                                <div style="text-align: center;">
+                                    <div class="status-indicator status-accepting" style="width: 12px; height: 12px; margin: 0 auto 4px;"></div>
+                                    <div style="font-size: 11px; color: #4caf50; font-weight: 600;">Accepting</div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <div style="text-align: center; padding: 16px; border-top: 1px solid #ccc; margin-top: 8px;">
+                        <a href="#" style="color: #333; text-decoration: underline;">View 9 more electricians →</a>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="flex justify-between mt-3">
+                    <button type="button" class="button button-secondary">← Back to Customer Info</button>
+                    <button type="button" class="button button-primary button-large">
+                        Continue to Review →
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="annotation mt-3">
+        <strong>Interaction Notes (Step 2):</strong>
+        <ul style="margin: 8px 0 0 20px;">
+            <li>Radio button selection highlights card with thick border</li>
+            <li>Reciprocity indicator color: Green (balanced), Orange (I owe), Red (they owe me)</li>
+            <li>Recommended badge for contractors who sent you leads recently</li>
+            <li>Broadcast mode allows multi-select (first to accept wins)</li>
+            <li>Auto-save progress in localStorage (prevent data loss)</li>
+        </ul>
+    </div>
+
+    <div class="annotation mt-2">
+        <strong>Step 3 Summary:</strong> Review page shows all details, commission calculation preview (10% of typical job value), SMS/Email preview, and final "Send Lead" button with confirmation modal.
+    </div>
+
+    <div class="annotation mt-2">
+        <strong>Mobile Considerations:</strong>
+        <ul style="margin: 8px 0 0 20px;">
+            <li>Progress steps become horizontal scroll dots</li>
+            <li>Form fields stack vertically</li>
+            <li>Urgency buttons stack 2x2 grid on mobile</li>
+            <li>Contractor cards full-width on mobile</li>
+            <li>Sticky "Continue" button at bottom on mobile</li>
+        </ul>
+    </div>
+</body>
+</html>

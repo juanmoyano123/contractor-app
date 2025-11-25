@@ -1,0 +1,516 @@
+/**
+ * Wireframe Styles
+ * Low-fidelity wireframes using semantic HTML and minimal CSS
+ * Grayscale only, focus on structure and layout
+ */
+
+@import url('../design-tokens.css');
+
+/* Base wireframe styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Container */
+.wireframe-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 0;
+}
+
+/* Annotations */
+.annotation {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 8px 12px;
+  margin: 16px 0;
+  font-size: 12px;
+  color: #856404;
+}
+
+/* Header */
+header {
+  background-color: #e0e0e0;
+  border-bottom: 2px solid #999;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-placeholder {
+  width: 150px;
+  height: 40px;
+  background-color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border: 1px solid #999;
+  background-color: #f0f0f0;
+  display: inline-block;
+}
+
+/* Main layout */
+main {
+  display: flex;
+  min-height: calc(100vh - 200px);
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ccc;
+  padding: 24px 16px;
+}
+
+.content {
+  flex: 1;
+  padding: 24px;
+}
+
+/* Grid layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Metric cards */
+.metric-card {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 16px;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.metric-trend {
+  height: 40px;
+  background: repeating-linear-gradient(
+    45deg,
+    #e0e0e0,
+    #e0e0e0 10px,
+    #f0f0f0 10px,
+    #f0f0f0 20px
+  );
+  margin-top: 8px;
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Contractor cards */
+.contractor-card {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+}
+
+.contractor-avatar {
+  width: 64px;
+  height: 64px;
+  background-color: #ccc;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #666;
+}
+
+.contractor-info {
+  flex: 1;
+}
+
+.contractor-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.contractor-trade {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.contractor-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  font-size: 10px;
+  margin-right: 4px;
+}
+
+/* Buttons */
+button,
+.button {
+  padding: 8px 16px;
+  border: 2px solid #333;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-primary {
+  background-color: #333;
+  color: #fff;
+}
+
+.button-secondary {
+  background-color: #fff;
+  color: #333;
+}
+
+.button-large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.input-required::after {
+  content: "*";
+  color: #666;
+  margin-left: 4px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 2px solid #ccc;
+}
+
+thead {
+  background-color: #e0e0e0;
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Charts (placeholder) */
+.chart-placeholder {
+  height: 300px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-placeholder::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    #e0e0e0 0px,
+    #e0e0e0 40px,
+    transparent 40px,
+    transparent 60px
+  );
+}
+
+/* Search/filter */
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search-bar input {
+  flex: 1;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 16px;
+}
+
+.tab {
+  padding: 12px 24px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-bottom: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tab.active {
+  background-color: #fff;
+  border-bottom: 2px solid #fff;
+  margin-bottom: -2px;
+}
+
+/* Progress indicator */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  margin: 8px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #333;
+}
+
+/* Step indicator */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.step::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  border: 2px solid #999;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 8px;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+.step.active::before {
+  background-color: #333;
+  border-color: #333;
+}
+
+.step.completed::before {
+  content: "✓";
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Status indicators */
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.status-accepting {
+  background-color: #4caf50;
+}
+
+.status-capacity {
+  background-color: #ff9800;
+}
+
+.status-unavailable {
+  background-color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+
+.p-1 { padding: 8px; }
+.p-2 { padding: 16px; }
+.p-3 { padding: 24px; }
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.gap-1 { gap: 8px; }
+.gap-2 { gap: 16px; }
+.gap-3 { gap: 24px; }
